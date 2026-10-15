@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reformas Integrales Barcelona | Grupo CNLPRO · Presupuesto Cerrado y Garantía</title>
+  <meta name="description" content="Especialistas en reformas integrales de viviendas y locales en Barcelona. Presupuesto cerrado sin sorpresas, hasta 10 años de garantía y visita técnica gratuita." />
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:title" content="Reformas Integrales Barcelona | Grupo CNLPRO" />
+  <meta property="og:description" content="Reformas integrales con precio claro y garantía por escrito en Barcelona y área metropolitana." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fd651e'><path d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/></svg>" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#001528",
+            "primary-container": "#0f2a42",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#7992ae",
+            "primary-fixed": "#d0e4ff",
+            "primary-fixed-dim": "#b0c9e7",
+            "secondary": "#a73a00",
+            "secondary-container": "#fd651e",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#571a00",
+            "secondary-fixed": "#ffdbce",
+            "secondary-fixed-dim": "#ffb599",
+            "tertiary": "#001714",
+            "tertiary-container": "#002e28",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#329f90",
+            "surface": "#f9f9ff",
+            "surface-dim": "#cfdaf2",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container": "#e7eeff",
+            "surface-container-high": "#dee8ff",
+            "surface-container-highest": "#d8e3fb",
+            "on-surface": "#111c2d",
+            "on-surface-variant": "#43474d",
+            "outline": "#73777e",
+            "outline-variant": "#c3c6ce",
+            "inverse-surface": "#263143",
+            "inverse-on-surface": "#ecf1ff"
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Custom scrollbar & animations */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Comparison slider styles */
+    .compare-container {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .compare-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .compare-handle {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: #ffffff;
+      cursor: ew-resize;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      z-index: 20;
+    }
+    .compare-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background: #fd651e;
+      color: #ffffff;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(253, 101, 30, 0.4);
+    }
+    /* Modal transitions */
+    .modal-backdrop {
+      background: rgba(15, 42, 66, 0.65);
+      backdrop-filter: blur(6px);
+    }
+    /* Toast feedback */
+    #toast-notification {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+
+  <!-- ================================================================= -->
+  <!-- TOP ANNOUNCEMENT BAR                                              -->
+  <!-- ================================================================= -->
+  <div class="bg-primary text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+        <span class="font-medium">Tu empresa de reformas integrales de confianza en Barcelona y comarcas</span>
+      </div>
+      <div class="flex items-center gap-4 text-primary-fixed-dim">
+        <a href="tel:936940338" class="hover:text-white flex items-center gap-1 transition-colors">
+          <span class="material-symbols-outlined text-[16px]">call</span>
+          <span>936 94 03 38</span>
+        </a>
+        <span class="hidden md:inline">|</span>
+        <a href="https://wa.me/34936940338" target="_blank" rel="noopener" class="hover:text-secondary-fixed flex items-center gap-1 text-[#25D366] transition-colors">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>WhatsApp 24h</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MAIN HEADER / NAVBAR                                              -->
+  <!-- ================================================================= -->
+  <header class="sticky top-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_2px_12px_rgba(15,42,66,0.06)] border-b border-surface-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-primary-container text-white flex items-center justify-center font-extrabold shadow-sm group-hover:bg-secondary-container transition-colors">
+          <span class="material-symbols-outlined text-[24px]">architecture</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-base sm:text-lg text-primary tracking-tight leading-tight">Reformas Integrales Barcelona</span>
+          <span class="text-xs text-on-surface-variant font-medium">Grupo CNLPRO · Empresa Colegiada</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-on-surface-variant">
+        <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
+        <a href="#proyectos" class="hover:text-primary transition-colors">Proyectos</a>
+        <a href="#precios" class="hover:text-primary transition-colors">Precios y Calculadora</a>
+        <a href="#opiniones" class="hover:text-primary transition-colors">Opiniones</a>
+        <a href="#faq" class="hover:text-primary transition-colors">Preguntas Frecuentes</a>
+        <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Phone CTA (Desktop) -->
+        <a href="tel:936940338" class="hidden sm:flex items-center gap-2 text-primary hover:text-secondary-container font-bold text-sm transition-colors py-2 px-3 rounded-lg hover:bg-surface-container-low">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+          <span>936 94 03 38</span>
+        </a>
+
+        <!-- WhatsApp Quick CTA -->
+        <a href="https://wa.me/34936940338?text=Hola%20Grupo%20CNLPRO,%20quiero%20pedir%20presupuesto%20para%20una%20reforma" target="_blank" rel="noopener" class="hidden md:inline-flex items-center gap-2 bg-[#128C7E] hover:bg-[#075E54] text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-[0_4px_16px_rgba(18,140,126,0.3)] transition-all transform hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Presupuesto WhatsApp</span>
+        </a>
+
+        <!-- Primary CTA Button -->
+        <a href="#contacto" class="bg-secondary-container hover:bg-secondary text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition-all transform hover:-translate-y-0.5">
+          Pedir Presupuesto
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl text-primary hover:bg-surface-container transition-colors focus:outline-none" aria-label="Abrir menú de navegación">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-surface-container bg-surface-container-lowest px-4 pt-3 pb-6 flex flex-col gap-3 shadow-lg">
+      <a href="#servicios" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Servicios Técnicos</a>
+      <a href="#proyectos" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Proyectos Antes y Después</a>
+      <a href="#precios" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Precios y Calculadora</a>
+      <a href="#opiniones" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Opiniones Verificadas</a>
+      <a href="#faq" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Preguntas Frecuentes</a>
+      <a href="#contacto" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-semibold hover:bg-surface-container-low transition-colors">Contacto y Oficinas</a>
+      
+      <div class="pt-3 border-t border-surface-container flex flex-col gap-2">
+        <a href="tel:936940338" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-primary text-white font-bold text-sm">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+          <span>Llamar a Oficina: 936 94 03 38</span>
+        </a>
+        <a href="https://wa.me/34936940338" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-bold text-sm">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Contactar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- ================================================================= -->
+    <!-- 1. HERO SECTION WITH QUICK ESTIMATOR CARD                         -->
+    <!-- ================================================================= -->
+    <section id="inicio" class="relative bg-surface-container-low overflow-hidden py-12 lg:py-20 border-b border-surface-container">
+      <!-- Subtle ambient lighting circles -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Copy & Direct Value Proposition -->
+          <div class="lg:col-span-7 flex flex-col gap-6">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container w-fit">
+              <span class="flex h-2.5 w-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+              <span class="text-xs sm:text-sm font-bold text-primary">Grupo CNLPRO · Barcelona y Área Metropolitana</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight leading-tight sm:leading-tight lg:leading-tight">
+              Reformas integrales en Barcelona, con <span class="text-secondary-container">precio claro</span> y garantía por escrito.
+            </h1>
+
+            <p class="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              Te acompañamos desde la licencia urbanística y el diseño 3D hasta la entrega de llaves. Presupuesto 100% cerrado, desglosado partida a partida y sin compromiso.
+            </p>
+
+            <!-- Direct CTA Actions -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="https://wa.me/34936940338?text=Hola%20Grupo%20CNLPRO,%20deseo%20pedir%20presupuesto%20para%20una%20reforma%20en%20Barcelona" target="_blank" rel="noopener" class="flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-6 py-3.5 rounded-xl font-bold text-base shadow-[0_8px_20px_rgba(37,211,102,0.35)] transition-all transform hover:-translate-y-0.5">
+                <span class="material-symbols-outlined text-[22px]">chat</span>
+                <span>Pedir presupuesto por WhatsApp</span>
+              </a>
+              <a href="#precios" class="flex items-center gap-2 bg-primary hover:bg-primary-container text-white px-6 py-3.5 rounded-xl font-bold text-base shadow-sm transition-all transform hover:-translate-y-0.5">
+                <span class="material-symbols-outlined text-[20px]">calculate</span>
+                <span>Calcular precio reforma</span>
+              </a>
+            </div>
+
+            <!-- Guarantee note -->
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs sm:text-sm pt-1">
+              <span class="material-symbols-outlined text-[#25D366] text-[18px]">verified</span>
+              <span>Respuesta media técnica en WhatsApp: <strong>menos de 15 minutos</strong></span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Quick Quote Form Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-[0_12px_40px_-8px_rgba(15,42,66,0.12)] border border-surface-container">
+              
+              <div class="flex items-center justify-between pb-4 border-b border-surface-container mb-4">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-secondary-container font-extrabold">Visita y Presupuesto Gratis</span>
+                  <h2 class="text-xl font-bold text-primary">Solicita tu Presupuesto 24h</h2>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[22px]">engineering</span>
+                </div>
+              </div>
+
+              <!-- Fast Form to WhatsApp -->
+              <form id="hero-quick-form" class="flex flex-col gap-3.5" onsubmit="handleHeroSubmit(event)">
+                
+                <div>
+                  <label class="block text-xs font-bold text-on-surface-variant mb-1" for="hero-nombre">Tu Nombre y Apellidos *</label>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">person</span>
+                    <input id="hero-nombre" type="text" required placeholder="Ej. Joan Martí" class="w-full bg-surface-container-low pl-10 pr-3 py-2.5 rounded-xl text-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary border border-transparent focus:border-primary transition-all" />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-bold text-on-surface-variant mb-1" for="hero-telefono">Teléfono / WhatsApp *</label>
+                    <div class="relative">
+                      <span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">call</span>
+                      <input id="hero-telefono" type="tel" required placeholder="600 000 000" class="w-full bg-surface-container-low pl-10 pr-3 py-2.5 rounded-xl text-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary border border-transparent focus:border-primary transition-all" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-on-surface-variant mb-1" for="hero-m2">Superficie aprox (m²)</label>
+                    <div class="relative">
+                      <span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">square_foot</span>
+                      <input id="hero-m2" type="number" placeholder="Ej. 80" min="10" max="1000" class="w-full bg-surface-container-low pl-10 pr-3 py-2.5 rounded-xl text-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary border border-transparent focus:border-primary transition-all" />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-on-surface-variant mb-1" for="hero-tipo">Tipo de reforma *</label>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">home_work</span>
+                    <select id="hero-tipo" required class="w-full bg-surface-container-low pl-10 pr-8 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary border border-transparent focus:border-primary transition-all appearance-none">
+                      <option value="" disabled selected>Selecciona una opción</option>
+                      <option value="Reforma Integral de Piso o Vivienda">Reforma Integral de Piso o Vivienda</option>
+                      <option value="Reforma de Cocina a Medida">Reforma de Cocina a Medida</option>
+                      <option value="Reforma de Baño o Suite">Reforma de Baño o Suite</option>
+                      <option value="Local Comercial u Oficina">Local Comercial u Oficina</option>
+                      <option value="Fachada SATE o Aislamiento">Fachada SATE o Aislamiento</option>
+                      <option value="Rehabilitación de Edificio">Rehabilitación de Edificio</option>
+                      <option value="Construcción de Casa / Chalet">Construcción de Casa / Chalet</option>
+                    </select>
+                    <span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-outline pointer-events-none">expand_more</span>
+                  </div>
+                </div>
+
+                <button type="submit" class="w-full mt-2 bg-secondary-container hover:bg-secondary text-white font-bold text-base py-3.5 px-4 rounded-xl shadow-[0_6px_20px_rgba(253,101,30,0.4)] transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                  <span>Obtener mi presupuesto gratuito</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </button>
+
+                <div class="flex items-center justify-center gap-2 text-center text-outline text-xs pt-1">
+                  <span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+                  <span>Sin compromiso · Te contactamos en menos de 2 horas</span>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trust Features Strip Below Hero -->
+        <div class="mt-12 pt-8 border-t border-surface-container grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container">
+            <div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">star</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-primary">177 reseñas de 5★</span>
+              <span class="text-xs text-on-surface-variant">Verificadas en Google</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container">
+            <div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">verified_user</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-primary">Garantía por escrito</span>
+              <span class="text-xs text-on-surface-variant">Blindada en contrato</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container">
+            <div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">credit_score</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-primary">Hasta 12 meses 0%</span>
+              <span class="text-xs text-on-surface-variant">Sin intereses (TIN 0%)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-surface-container">
+            <div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[20px]">request_quote</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-primary">Sin compromiso</span>
+              <span class="text-xs text-on-surface-variant">Visita técnica gratuita</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. AUDITED METRICS & TRUST BANNER                                 -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-primary text-white rounded-2xl p-8 lg:p-12 shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Google Review Highlight -->
+            <div class="lg:col-span-4 flex flex-col gap-2 border-b lg:border-b-0 lg:border-r border-white/10 pb-6 lg:pb-0 lg:pr-8">
+              <div class="flex items-center gap-3">
+                <span class="text-4xl sm:text-5xl font-extrabold text-secondary-fixed leading-none">4.9</span>
+                <div class="flex flex-col">
+                  <div class="flex text-amber-400">
+                    <span class="material-symbols-filled text-[20px]">star</span>
+                    <span class="material-symbols-filled text-[20px]">star</span>
+                    <span class="material-symbols-filled text-[20px]">star</span>
+                    <span class="material-symbols-filled text-[20px]">star</span>
+                    <span class="material-symbols-filled text-[20px]">star</span>
+                  </div>
+                  <span class="text-xs text-primary-fixed-dim">Puntuación máxima contrastada</span>
+                </div>
+              </div>
+              <p class="text-base font-bold text-white mt-1">177 reseñas verificadas en Google</p>
+              <p class="text-xs sm:text-sm text-primary-fixed-dim leading-relaxed">Nuestros clientes avalan la puntualidad, limpieza rigurosa y fidelidad absoluta a las cotizaciones pactadas.</p>
+            </div>
+
+            <!-- 4 Quantitative Metrics -->
+            <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+              <div class="flex flex-col gap-1 p-3 rounded-xl bg-primary-container/50">
+                <span class="text-3xl sm:text-4xl font-extrabold text-secondary-fixed">+18</span>
+                <span class="text-sm font-bold text-white">Años de experiencia</span>
+                <span class="text-xs text-primary-fixed-dim">En Barcelona y comarcas</span>
+              </div>
+              <div class="flex flex-col gap-1 p-3 rounded-xl bg-primary-container/50">
+                <span class="text-3xl sm:text-4xl font-extrabold text-secondary-fixed">+850</span>
+                <span class="text-sm font-bold text-white">Obras finalizadas</span>
+                <span class="text-xs text-primary-fixed-dim">Con acta de entrega 100%</span>
+              </div>
+              <div class="flex flex-col gap-1 p-3 rounded-xl bg-primary-container/50">
+                <span class="text-3xl sm:text-4xl font-extrabold text-secondary-fixed">98%</span>
+                <span class="text-sm font-bold text-white">Satisfacción</span>
+                <span class="text-xs text-primary-fixed-dim">Clientes que nos recomiendan</span>
+              </div>
+              <div class="flex flex-col gap-1 p-3 rounded-xl bg-primary-container/50">
+                <span class="text-3xl sm:text-4xl font-extrabold text-secondary-fixed">100%</span>
+                <span class="text-sm font-bold text-white">Plazos en contrato</span>
+                <span class="text-xs text-primary-fixed-dim">Penalización por retraso</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. SERVICES GRID (8 SPECIALTIES)                                  -->
+    <!-- ================================================================= -->
+    <section id="servicios" class="w-full bg-surface-container-low py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-2xl flex flex-col gap-2">
+            <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Especialidades Técnicas</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Servicios integrales para cada necesidad</h2>
+            <p class="text-sm sm:text-base text-on-surface-variant">Desde reformas completas llave en mano hasta rehabilitación de fincas y aislamiento térmico de máxima eficiencia.</p>
+          </div>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary-container transition-colors shrink-0">
+            <span>Consultar presupuesto a medida</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- 8 Services Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Service 1: Viviendas -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Reforma integral de piso en Barcelona" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">apartment</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Reforma integral de pisos y viviendas</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Transformación completa, redistribución de tabiquería, fontanería, electricidad y acabados de primera categoría.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: Baños -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Reforma de baños modernos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">shower</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Reforma de baños</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Platos de ducha a ras de suelo, griferías empotradas termostáticas, microcemento y azulejos porcelánicos.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: Cocinas -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Reforma de cocina moderna en isla" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">countertops</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Reforma de cocinas</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Diseños abiertos en isla, carpintería a medida antihuella, encimeras porcelánicas y máxima ergonomía.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4: Locales -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Locales y cambio de uso a vivienda" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">storefront</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Locales y cambio de uso</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Habilitación para negocios comerciales y gestión técnica completa de cambio de uso de local a vivienda.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5: Fachadas SATE -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=800&q=80" alt="Fachadas y sistema SATE" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">domain</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Fachadas y sistema SATE</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Aislamiento térmico exterior para máxima eficiencia energética, eliminación de puentes térmicos y ahorro en climatización.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6: Tejados -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Tejados y terrazas comunitarias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">roofing</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Tejados y cubiertas</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Impermeabilización profesional con poliuretano o láminas asfálticas, reposición de tejas y aislamiento térmico.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 7: Rehabilitación Edificios -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Rehabilitación de edificios en Barcelona" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">foundation</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Rehabilitación de edificios</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Gestión y subsanación de ITE, refuerzos estructurales de vigas, vestíbulos y soluciones de accesibilidad a cota cero.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 8: Obra Nueva / Chalets -->
+          <div class="group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-surface-container">
+            <div class="h-48 w-full overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Construcción de chalets y obra nueva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-primary/90 text-white p-2 rounded-xl backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[20px]">villa</span>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <h3 class="text-lg font-bold text-primary">Construcción y obra nueva</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Proyectos llave en mano con máxima certificación energética (Passivhaus / Clase A), cimentación y acabados de lujo.</p>
+              </div>
+              <a href="#precios" class="inline-flex items-center gap-1 text-sm font-bold text-secondary-container hover:text-secondary">
+                <span>Ver costes y detalles</span>
+                <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. WHY TRUST GRUPO CNLPRO (5 PILLARS)                             -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+          <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Cero Incertidumbre</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Por qué confiar tu proyecto al Grupo CNLPRO</h2>
+          <p class="text-sm sm:text-base text-on-surface-variant">Eliminamos las tres mayores preocupaciones de cualquier reforma: retrasos inesperados, desvíos económicos y calidades deficientes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 border border-surface-container hover:border-primary/20 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">group</span>
+            </div>
+            <h3 class="text-base font-bold text-primary">Equipo propio de profesionales</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Albañiles, fontaneros, electricistas y pintores en plantilla fija, sin subcontratas ni intermediarios.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 border border-surface-container hover:border-primary/20 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">history_edu</span>
+            </div>
+            <h3 class="text-base font-bold text-primary">Contrato y garantía por escrito</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Plazos de ejecución y precios blindados legalmente sin ninguna sorpresa económica de última hora.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 border border-surface-container hover:border-primary/20 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">fact_check</span>
+            </div>
+            <h3 class="text-base font-bold text-primary">Pagos vinculados al avance</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Abonas cada fase de la obra solo cuando certificas personalmente que está correctamente ejecutada.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 border border-surface-container hover:border-primary/20 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">assignment_turned_in</span>
+            </div>
+            <h3 class="text-base font-bold text-primary">Gestión de licencias y papeleo</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Tramitamos permisos de obras mayores y menores con el Ayuntamiento para que no tengas que preocuparte.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-4 border border-surface-container hover:border-primary/20 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[26px]">checklist_rtl</span>
+            </div>
+            <h3 class="text-base font-bold text-primary">Visita final con acta de recepción</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Revisión exhaustiva conjunta antes de dar la obra por terminada para asegurar acabados impolutos.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. 5-STEP METHODOLOGY                                             -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface-container-low py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="max-w-2xl flex flex-col gap-2">
+          <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Metodología Transparente</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Cómo trabajamos: 5 pasos sin estrés</h2>
+          <p class="text-sm sm:text-base text-on-surface-variant">Un proceso estructurado para que siempre sepas exactamente qué ocurre en tu vivienda en cada momento.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between gap-6">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-full bg-secondary-container text-white font-bold text-sm flex items-center justify-center">1</span>
+              <span class="material-symbols-outlined text-outline text-[24px]">contact_phone</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-base font-bold text-primary">Llamada o visita gratuita</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Escuchamos tus ideas, analizamos el espacio y tomamos medidas exactas in situ en tu inmueble.</p>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between gap-6">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-full bg-secondary-container text-white font-bold text-sm flex items-center justify-center">2</span>
+              <span class="material-symbols-outlined text-outline text-[24px]">receipt_long</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-base font-bold text-primary">Presupuesto detallado</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Partida por partida, calidades de materiales y costes totalmente transparentes sin letra pequeña.</p>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between gap-6">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-full bg-secondary-container text-white font-bold text-sm flex items-center justify-center">3</span>
+              <span class="material-symbols-outlined text-outline text-[24px]">handshake</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-base font-bold text-primary">Contrato y calendario</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Fechas de inicio, hitos constructivos y entrega de llaves cerrados y firmados por escrito.</p>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between gap-6">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-full bg-secondary-container text-white font-bold text-sm flex items-center justify-center">4</span>
+              <span class="material-symbols-outlined text-outline text-[24px]">construction</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-base font-bold text-primary">Ejecución y seguimiento</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Jefe de obra asignado, reportes continuos y abono progresivo por fases validadas.</p>
+            </div>
+          </div>
+
+          <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-surface-container flex flex-col justify-between gap-6">
+            <div class="flex items-center justify-between">
+              <span class="w-9 h-9 rounded-full bg-[#25D366] text-white font-bold text-sm flex items-center justify-center">5</span>
+              <span class="material-symbols-outlined text-outline text-[24px]">key</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-base font-bold text-primary">Revisión y garantía</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Limpieza profesional integral fin de obra y entrega formal con documento de garantía legal.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. REAL BEFORE & AFTER PROJECTS (INTERACTIVE)                     -->
+    <!-- ================================================================= -->
+    <section id="proyectos" class="w-full bg-surface py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-2xl flex flex-col gap-2">
+            <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Resultados Reales</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Proyectos Antes y Después en Barcelona</h2>
+            <p class="text-sm sm:text-base text-on-surface-variant">Conoce casos reales con metraje, duración de ejecución y presupuesto final exacto.</p>
+          </div>
+
+          <!-- Interactive Before / After Toggle Buttons -->
+          <div class="flex items-center gap-2 p-1.5 bg-surface-container rounded-xl border border-surface-container-high shrink-0">
+            <button id="toggle-despues" onclick="setProjectView('after')" class="px-4 py-2 rounded-lg text-sm font-bold bg-surface-container-lowest text-primary shadow-sm transition-all">
+              Ver Después (Finalizado)
+            </button>
+            <button id="toggle-antes" onclick="setProjectView('before')" class="px-4 py-2 rounded-lg text-sm font-semibold text-on-surface-variant hover:text-primary transition-all">
+              Ver Estado Original (Antes)
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          <!-- Project 1: Featured Wide with Interactive View -->
+          <div class="lg:col-span-2 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-container flex flex-col">
+            <div class="relative h-72 sm:h-96 w-full overflow-hidden group">
+              <!-- After Image -->
+              <img id="proj-img-after" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Reforma piso L'Eixample finalizada" class="w-full h-full object-cover transition-opacity duration-500" />
+              
+              <!-- Before Image (Hidden initially) -->
+              <img id="proj-img-before" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Estado previo obra piso L'Eixample" class="hidden w-full h-full object-cover transition-opacity duration-500" />
+
+              <div class="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-sm flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                <span>L'Eixample, Barcelona</span>
+              </div>
+              <div id="proj-badge" class="absolute top-4 right-4 bg-secondary-container text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-sm">
+                DESPUÉS
+              </div>
+
+              <!-- Quick click hint -->
+              <div class="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1.5 rounded-lg text-xs backdrop-blur-sm pointer-events-none flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">touch_app</span>
+                <span>Alterna arriba para comparar</span>
+              </div>
+            </div>
+
+            <div class="p-6 flex flex-col justify-between gap-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2">
+                <div>
+                  <h3 class="text-xl font-bold text-primary">Reforma Integral en L'Eixample</h3>
+                  <p class="text-xs sm:text-sm text-on-surface-variant">Piso señorial con redistribución diáfana, recuperación de techos altos y carpinterías climalit.</p>
+                </div>
+                <div class="sm:text-right shrink-0">
+                  <span class="text-2xl font-extrabold text-secondary-container">32.500 €</span>
+                  <span class="block text-xs text-on-surface-variant font-medium">Precio cerrado final</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-surface-container bg-surface-container-low p-4 rounded-xl">
+                <div class="flex items-center gap-6 text-sm text-on-surface-variant">
+                  <div class="flex items-center gap-1.5 font-semibold">
+                    <span class="material-symbols-outlined text-primary text-[20px]">square_foot</span>
+                    <span>85 m²</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 font-semibold">
+                    <span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+                    <span>7 semanas</span>
+                  </div>
+                </div>
+                <a href="#contacto" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary-container text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors">
+                  <span>Quiero una reforma similar</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Cocina Gràcia -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-container flex flex-col justify-between">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80" alt="Cocina moderna en Gràcia" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-sm">
+                Gràcia, Barcelona
+              </div>
+              <div class="absolute top-4 right-4 bg-secondary-container text-white px-3 py-1.5 rounded-lg text-xs font-bold">
+                DESPUÉS
+              </div>
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-primary">Cocina abierta contemporánea</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant">Integración total con el salón, muebles a medida y barra de desayuno en roble.</p>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="text-xs text-on-surface-variant font-medium">16 m² · 2 semanas</span>
+                  <span class="text-lg font-bold text-secondary-container">8.400 €</span>
+                </div>
+                <a href="#contacto" class="p-2.5 rounded-xl bg-surface-container text-primary hover:bg-secondary-container hover:text-white transition-colors" aria-label="Consultar proyecto">
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Baño Sarrià -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-container flex flex-col justify-between">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Baño en microcemento en Sarrià" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-sm">
+                Sarrià, Barcelona
+              </div>
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-primary">Baño suite en microcemento</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant">Revestimiento continuo sin juntas, plato integrado y mampara negra extraplana.</p>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="text-xs text-on-surface-variant font-medium">6.5 m² · 9 días</span>
+                  <span class="text-lg font-bold text-secondary-container">4.200 €</span>
+                </div>
+                <a href="#contacto" class="p-2.5 rounded-xl bg-surface-container text-primary hover:bg-secondary-container hover:text-white transition-colors" aria-label="Consultar proyecto">
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Fachada SATE Poblenou -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-container flex flex-col justify-between">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80" alt="Fachada SATE en Poblenou" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-sm">
+                Poblenou, Barcelona
+              </div>
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-primary">Fachada SATE y balcones</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant">Aislamiento térmico comunitario, impermeabilización de losas y barandillas.</p>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="text-xs text-on-surface-variant font-medium">320 m² · 5 semanas</span>
+                  <span class="text-lg font-bold text-secondary-container">28.000 €</span>
+                </div>
+                <a href="#contacto" class="p-2.5 rounded-xl bg-surface-container text-primary hover:bg-secondary-container hover:text-white transition-colors" aria-label="Consultar proyecto">
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Cambio de Local a Vivienda en Sants -->
+          <div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-surface-container flex flex-col justify-between">
+            <div class="relative h-60 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Cambio de local a vivienda en Sants" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1.5 rounded-lg text-xs font-bold backdrop-blur-sm">
+                Sants, Barcelona
+              </div>
+            </div>
+            <div class="p-6 flex flex-col gap-4">
+              <div>
+                <h3 class="text-lg font-bold text-primary">Cambio de local a vivienda</h3>
+                <p class="text-xs sm:text-sm text-on-surface-variant">Proyecto arquitectónico completo, cédula de habitabilidad y adaptación bioclimática.</p>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-surface-container">
+                <div class="flex flex-col">
+                  <span class="text-xs text-on-surface-variant font-medium">70 m² · 8 semanas</span>
+                  <span class="text-lg font-bold text-secondary-container">39.000 €</span>
+                </div>
+                <a href="#contacto" class="p-2.5 rounded-xl bg-surface-container text-primary hover:bg-secondary-container hover:text-white transition-colors" aria-label="Consultar proyecto">
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. REAL PRICING TABLE & LIVE ESTIMATOR CALCULATOR                 -->
+    <!-- ================================================================= -->
+    <section id="precios" class="w-full bg-surface-container-low py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="text-center max-w-3xl mx-auto flex flex-col gap-3">
+          <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Claridad Financiera</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Precios orientativos y calculadora de costes</h2>
+          <p class="text-sm sm:text-base text-on-surface-variant">Tarifas transparentes calculadas sobre el coste real de mano de obra y materiales en Barcelona.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Column 1: Pricing Reference Table -->
+          <div class="lg:col-span-7 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl shadow-sm border border-surface-container flex flex-col gap-6">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg sm:text-xl font-bold text-primary">Rangos reales según tipología</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-surface-container text-outline">Tarifas 2025/2026</span>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Piso de 50 m²</span>
+                  <span class="text-xs text-on-surface-variant">Reforma estándar completa (electricidad, suelos, pintura, cocina y baño)</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-primary shrink-0">Desde 18.000 €</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Piso de 80 m²</span>
+                  <span class="text-xs text-on-surface-variant">Reforma completa con calidades premium y carpintería a medida</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-primary shrink-0">Desde 28.000 €</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Piso de 100 m²</span>
+                  <span class="text-xs text-on-surface-variant">Redistribución completa, climatización por conductos y acabados top</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-primary shrink-0">Desde 35.000 €</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Baño integral</span>
+                  <span class="text-xs text-on-surface-variant">Fontanería nueva, sanitarios, plato de resina y azulejo rectificado</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-secondary-container shrink-0">Desde 3.800 €</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Cocina integral</span>
+                  <span class="text-xs text-on-surface-variant">Mobiliario hidrófugo a medida, encimera de cuarzo o porcelánico y tomas</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-secondary-container shrink-0">Desde 6.900 €</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+                <div>
+                  <span class="text-sm sm:text-base font-bold text-primary block">Fachada SATE (por cada 100 m²)</span>
+                  <span class="text-xs text-on-surface-variant">Aislamiento EPS grafitado o lana de roca y mortero acrílico certificado</span>
+                </div>
+                <span class="text-base sm:text-lg font-extrabold text-primary shrink-0">Desde 9.000 €</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-secondary-fixed/40 border border-secondary-fixed flex items-start gap-3">
+              <span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">info</span>
+              <p class="text-xs sm:text-sm text-on-secondary-fixed-variant leading-relaxed">
+                <strong>Compromiso CNLPRO:</strong> Estos importes son referencias orientativas. Tras la visita técnica de medición a tu inmueble, te entregamos un <strong>presupuesto cerrado y vinculante</strong> sin desviaciones.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Live Interactive Calculator Widget -->
+          <div class="lg:col-span-5 bg-primary text-white p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+            
+            <div class="flex flex-col gap-1">
+              <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Estimador Inmediato</span>
+              <h3 class="text-xl font-bold text-white">Calcula el precio de tu reforma</h3>
+              <p class="text-xs sm:text-sm text-primary-fixed-dim">Selecciona las opciones para obtener un cálculo al instante.</p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              
+              <!-- Typology Selector -->
+              <div>
+                <label for="calc-tipo" class="block text-xs font-bold text-primary-fixed mb-1.5">Tipo de intervención</label>
+                <select id="calc-tipo" onchange="actualizarCalculo()" class="w-full bg-primary-container text-white px-3.5 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-secondary-fixed border border-white/10">
+                  <option value="integral" selected>Piso / Vivienda Completa</option>
+                  <option value="cocina">Cocina Integral</option>
+                  <option value="bano">Baño / Baños</option>
+                  <option value="local">Local Comercial u Oficina</option>
+                </select>
+              </div>
+
+              <!-- M2 Slider -->
+              <div>
+                <div class="flex justify-between items-center mb-1.5">
+                  <label for="calc-m2" class="text-xs font-bold text-primary-fixed">Superficie estimada</label>
+                  <span id="calc-m2-val" class="text-sm font-extrabold text-secondary-fixed">75 m²</span>
+                </div>
+                <input id="calc-m2" type="range" min="10" max="250" value="75" step="5" oninput="document.getElementById('calc-m2-val').innerText = this.value + ' m²'; actualizarCalculo();" class="w-full accent-secondary-container cursor-pointer" />
+                <div class="flex justify-between text-[11px] text-primary-fixed-dim mt-1">
+                  <span>10 m²</span>
+                  <span>120 m²</span>
+                  <span>250 m²</span>
+                </div>
+              </div>
+
+              <!-- Quality Tier Toggle -->
+              <div>
+                <label class="block text-xs font-bold text-primary-fixed mb-1.5">Nivel de calidades</label>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button" onclick="setQuality('estandar', this)" class="calc-btn py-2 px-3 rounded-lg text-xs font-bold bg-primary-container text-white border border-white/10 hover:bg-white/10 transition-colors">
+                    Estándar
+                  </button>
+                  <button type="button" onclick="setQuality('premium', this)" class="calc-btn py-2 px-3 rounded-lg text-xs font-bold bg-secondary-container text-white shadow-md">
+                    Premium
+                  </button>
+                  <button type="button" onclick="setQuality('lujo', this)" class="calc-btn py-2 px-3 rounded-lg text-xs font-bold bg-primary-container text-white border border-white/10 hover:bg-white/10 transition-colors">
+                    Lujo / Alta Gama
+                  </button>
+                </div>
+              </div>
+
+              <!-- Estimation Result Box -->
+              <div class="p-5 rounded-xl bg-primary-container/80 border border-white/10 flex flex-col items-center justify-center text-center gap-1">
+                <span class="text-xs text-primary-fixed-dim uppercase tracking-wider font-semibold">Estimación aproximada</span>
+                <span id="calc-resultado" class="text-2xl sm:text-3xl font-black text-secondary-fixed">26.250 € - 30.000 €</span>
+                <span class="text-xs text-on-primary-container">IVA y materiales base incluidos</span>
+              </div>
+
+              <!-- Phone input to receive by WhatsApp -->
+              <div>
+                <label for="calc-tel" class="block text-xs font-medium text-primary-fixed mb-1">Tu número de WhatsApp para recibir desglose:</label>
+                <input id="calc-tel" type="tel" placeholder="Ej. 600 000 000" class="w-full bg-primary-container text-white placeholder:text-primary-fixed-dim/60 px-3.5 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-secondary-fixed border border-white/10" />
+              </div>
+
+              <!-- Submit to WhatsApp Button -->
+              <button type="button" onclick="enviarCalculoWhatsApp()" class="w-full bg-secondary-container hover:bg-secondary text-white font-bold text-sm py-3.5 px-4 rounded-xl shadow-[0_6px_20px_rgba(253,101,30,0.4)] transition-all flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Enviar estimación a mi WhatsApp</span>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 8. FINANCING BANNER                                               -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface py-16 lg:py-20 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-primary via-primary-container to-primary text-white rounded-2xl p-8 lg:p-12 shadow-xl relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <div class="lg:col-span-8 flex flex-col gap-4">
+              <span class="text-xs sm:text-sm font-bold text-secondary-fixed uppercase tracking-wider">Facilidades de Pago</span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Reforma ahora tu vivienda y págalo a tu ritmo</h2>
+              <p class="text-sm sm:text-base text-primary-fixed-dim leading-relaxed">
+                Facilitamos el acceso a tu reforma integral sin descapitalizarte, con planes de pago personalizados avalados por entidades bancarias líderes.
+              </p>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div class="p-4 rounded-xl bg-white/10 backdrop-blur-sm flex flex-col gap-1 border border-white/10">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[26px]">percent</span>
+                  <span class="text-sm font-bold text-white">Hasta 12 meses 0%</span>
+                  <span class="text-xs text-primary-fixed-dim">0% TIN / 0% TAE para reformas medias</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white/10 backdrop-blur-sm flex flex-col gap-1 border border-white/10">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[26px]">calendar_month</span>
+                  <span class="text-sm font-bold text-white">Hasta 120 meses</span>
+                  <span class="text-xs text-primary-fixed-dim">Cuotas mensuales adaptadas a tu medida</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white/10 backdrop-blur-sm flex flex-col gap-1 border border-white/10">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[26px]">savings</span>
+                  <span class="text-sm font-bold text-white">3% dto. Jubilados</span>
+                  <span class="text-xs text-primary-fixed-dim">Descuento directo mayores 65 años</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col gap-4">
+              <div class="bg-surface-container-lowest text-primary p-6 rounded-2xl shadow-lg flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-[#25D366] text-[32px]">support_agent</span>
+                  <div>
+                    <span class="text-base font-bold text-primary block">Estudio financiero en 24h</span>
+                    <span class="text-xs text-on-surface-variant">Sin papeleo complejo</span>
+                  </div>
+                </div>
+                <p class="text-xs sm:text-sm text-on-surface-variant">Presenta solo DNI y última nómina o pensión. Respuesta rápida y sin cambiar de banco.</p>
+                <a href="https://wa.me/34936940338?text=Hola,%20me%20gustaria%20consultar%20las%20opciones%20de%20financiacion%20para%20mi%20reforma" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5b] text-white py-3 rounded-xl font-bold text-sm shadow-md transition-all">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>Consultar financiación en WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 9. REVIEWS & VIDEO TESTIMONIAL                                    -->
+    <!-- ================================================================= -->
+    <section id="opiniones" class="w-full bg-surface-container-low py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div class="max-w-2xl flex flex-col gap-2">
+            <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Testimonios Reales</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Opiniones de quienes ya han reformado con nosotros</h2>
+            <p class="text-sm sm:text-base text-on-surface-variant">Transparencia con valoraciones en Google y testimonios reales de clientes en Barcelona.</p>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-bold text-primary">
+            <span>177 reseñas en Google</span>
+            <div class="flex text-amber-500">
+              <span class="material-symbols-filled text-[18px]">star</span>
+              <span class="material-symbols-filled text-[18px]">star</span>
+              <span class="material-symbols-filled text-[18px]">star</span>
+              <span class="material-symbols-filled text-[18px]">star</span>
+              <span class="material-symbols-filled text-[18px]">star</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Review 1 -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                </div>
+                <span class="text-xs text-outline font-medium">Hace 3 semanas</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                “Excelente coordinación. Cumplieron los plazos al día y sin desviaciones en el presupuesto pactado. Totalmente recomendables.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+              <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">MS</div>
+              <div class="flex flex-col">
+                <span class="text-sm font-bold text-primary">Marc Serrat</span>
+                <span class="text-xs text-on-surface-variant">Reforma integral piso en Rambla Catalunya</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                </div>
+                <span class="text-xs text-outline font-medium">Hace 1 mes</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                “Nos aconsejaron genial en la distribución. Los acabados de la cocina son impecables y el equipo fue súper limpio y atento en cada momento.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+              <div class="w-10 h-10 rounded-full bg-secondary-container text-white font-bold flex items-center justify-center text-sm">LG</div>
+              <div class="flex flex-col">
+                <span class="text-sm font-bold text-primary">Laura Gómez &amp; David</span>
+                <span class="text-xs text-on-surface-variant">Reforma cocina y baños en Les Corts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                </div>
+                <span class="text-xs text-outline font-medium">Hace 2 meses</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                “Se encargaron de todos los permisos con el ayuntamiento para el cambio de uso. Un alivio total delegar en profesionales de verdad.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+              <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">JC</div>
+              <div class="flex flex-col">
+                <span class="text-sm font-bold text-primary">Jordi Casals</span>
+                <span class="text-xs text-on-surface-variant">Cambio de local a vivienda en Sant Antoni</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                </div>
+                <span class="text-xs text-outline font-medium">Hace 3 meses</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                “La comunidad quedó encantadísima con el sistema SATE. Ya notamos el ahorro en calefacción y la estética del edificio cambió por completo.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+              <div class="w-10 h-10 rounded-full bg-primary-container text-white font-bold flex items-center justify-center text-sm">MP</div>
+              <div class="flex flex-col">
+                <span class="text-sm font-bold text-primary">Montserrat Puig</span>
+                <span class="text-xs text-on-surface-variant">Rehabilitación de fachada comunitaria</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm border border-surface-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-amber-400">
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                  <span class="material-symbols-filled text-[18px]">star</span>
+                </div>
+                <span class="text-xs text-outline font-medium">Hace 4 meses</span>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                “Transparencia de 10. Pagas por hitos según avanza la obra con tu visto bueno, lo que da una tranquilidad y seguridad enorme.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+              <div class="w-10 h-10 rounded-full bg-secondary text-white font-bold flex items-center justify-center text-sm">CM</div>
+              <div class="flex flex-col">
+                <span class="text-sm font-bold text-primary">Carlos M.</span>
+                <span class="text-xs text-on-surface-variant">Reforma integral 90 m² en Diagonal Mar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Testimonial Card with Modal Trigger -->
+          <div class="p-6 rounded-2xl bg-primary text-white shadow-md border border-primary-container flex flex-col justify-between gap-4">
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-secondary-fixed uppercase tracking-wider">Vídeo Caso Real</span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[20px]">smart_display</span>
+              </div>
+              <h4 class="text-base font-bold text-white">Entrevista con Elena y Pau tras su reforma en Gràcia</h4>
+              <p class="text-xs sm:text-sm text-primary-fixed-dim">Descubre cómo vivieron las 6 semanas de obra de su piso modernista y el resultado final.</p>
+            </div>
+
+            <div onclick="openVideoModal()" class="relative rounded-xl overflow-hidden group cursor-pointer">
+              <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Video entrevista reforma" class="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-all flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-secondary-container text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-filled text-[26px]">play_arrow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 10. FREQUENTLY ASKED QUESTIONS (ACCORDION)                        -->
+    <!-- ================================================================= -->
+    <section id="faq" class="w-full bg-surface py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <div class="text-center flex flex-col gap-3">
+          <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Resolvemos tus dudas</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">Preguntas frecuentes sobre reformas en Barcelona</h2>
+          <p class="text-sm sm:text-base text-on-surface-variant">Respuestas directas y claras sobre plazos, contratos, licencias y garantías.</p>
+        </div>
+
+        <div class="flex flex-col gap-3" id="faq-accordion">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>1. ¿Cuánto tarda una reforma integral en Barcelona?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Para un piso estándar de entre 70 y 90 m², el plazo habitual oscila entre <strong>6 y 9 semanas</strong> de trabajo continuado. Cada contrato especifica fecha de inicio y fecha exacta de entrega de llaves vinculada a penalizaciones si existieran retrasos imputables a la constructora.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>2. ¿El presupuesto que me entregáis es cerrado o puede subir luego?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Es <strong>100% cerrado y blindado por contrato</strong>. No aplicamos cargos sorpresa ni sobrecostes imprevistos. Cualquier modificación que desees incorporar durante el transcurso de la obra se presupuesta y aprueba por ti por escrito previamente.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>3. ¿Os encargáis de las licencias y permisos con el Ayuntamiento?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Sí, íntegramente. Nuestro equipo técnico redacta el proyecto, solicita la comunicación previa o licencia de obras ante el distrito municipal de Barcelona (o municipio correspondiente) y gestiona los trámites para tu total tranquilidad.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>4. ¿Qué garantía oficial ofrecéis sobre los trabajos?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Ofrecemos garantía legal por escrito sobre mano de obra e instalaciones (hasta 10 años en elementos estructurales), respaldada por nuestro Seguro de Responsabilidad Civil de <strong>1.000.000 €</strong> y nuestra inscripción en el Registro de Empresas Acreditadas (REA).
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>5. ¿Cómo se estructuran los pagos de la obra?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                No exigimos grandes anticipos a ciegas. Se abona una señal inicial para acopio de materiales y después se realizan <strong>pagos parciales contra certificación de hitos completados</strong> (demolición, instalaciones, alicatados, etc.) con tu conformidad expresa.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>6. ¿Puedo seguir viviendo en mi casa durante la obra?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                En reformas parciales (un solo baño o cocina) es viable sectorizando el área de trabajo y protegiendo el resto de la casa. En reformas integrales completas con cambio de suelos, tabiques y fontanería general, recomendamos residir fuera temporalmente para mayor comodidad y rapidez.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>7. ¿Hacéis proyectos de cambio de local a vivienda?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Sí, somos especialistas en Barcelona. Realizamos el estudio de viabilidad urbanística previa (densidad de vivienda por finca, altura libre mínima de 2,50 m y ventilación según normativa), redactamos el proyecto visado y tramitamos la cédula de habitabilidad final.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card bg-surface-container-lowest rounded-xl border border-surface-container overflow-hidden">
+            <button onclick="toggleAccordion(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 text-base font-bold text-primary hover:text-secondary-container transition-colors">
+              <span>8. ¿En qué zonas exactas prestáis servicio?</span>
+              <span class="material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-all duration-300 px-6 bg-surface-container-low/40">
+              <p class="py-4 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Trabajamos en todos los distritos de Barcelona ciudad (Eixample, Sarrià, Gràcia, Ciutat Vella, Les Corts, Sant Martí, etc.) y en comarcas: Barcelonès, Baix Llobregat (L'Hospitalet, Cornellà, Castelldefels), Vallès Occidental (Sant Cugat, Sabadell, Terrassa) y Maresme.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 11. NEXTGEN SUBSIDIES & BLOG ARTICLES                             -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface-container-low py-16 lg:py-24 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+        
+        <!-- NextGen Subsidies Banner -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-secondary-fixed/50 border border-secondary-fixed flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center shrink-0 shadow-sm">
+              <span class="material-symbols-outlined text-[26px]">euro</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <span class="text-xs sm:text-sm font-bold text-secondary uppercase tracking-wider">Subvenciones 2025/2026 en Cataluña</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-primary">Ayudas y Fondos Next Generation para rehabilitar tu vivienda</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">Hasta el 40% o 80% de subvención a fondo perdido en mejoras de aislamiento térmico (SATE), aerotermia y cambio de ventanas climalit.</p>
+            </div>
+          </div>
+          <a href="#contacto" class="shrink-0 bg-primary hover:bg-secondary-container text-white px-6 py-3 rounded-xl font-bold text-sm transition-colors shadow-sm">
+            Solicitar asesoramiento de ayudas
+          </a>
+        </div>
+
+        <!-- 3 Blog Articles -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col">
+            <div class="h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Guía de costes de baño" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-xs font-bold text-secondary-container">Guía de Precios</span>
+                <h4 class="text-base font-bold text-primary">¿Cuánto cuesta reformar un baño en 2025? Partida a partida</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Desglose de costes de fontanería, albañilería, sanitarios y errores comunes a evitar.</p>
+              </div>
+              <a href="#contacto" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-secondary-container">
+                <span>Leer detalles técnicos</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col">
+            <div class="h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Cocina abierta al salón" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-xs font-bold text-secondary-container">Distribución &amp; Diseño</span>
+                <h4 class="text-base font-bold text-primary">Claves para reformar una cocina abierta al salón</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Extracción de humos silenciosa, iluminación zonificada y revestimientos de fácil limpieza.</p>
+              </div>
+              <a href="#contacto" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-secondary-container">
+                <span>Leer detalles técnicos</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-surface-container flex flex-col">
+            <div class="h-44 w-full overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Guía reforma piso Barcelona" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between gap-4">
+              <div class="flex flex-col gap-2">
+                <span class="text-xs font-bold text-secondary-container">Paso a Paso</span>
+                <h4 class="text-base font-bold text-primary">Guía: Reforma integral de un piso en Barcelona</h4>
+                <p class="text-xs text-on-surface-variant leading-relaxed">Los trámites de licencia, elección de materiales, plazos de entrega y cómo blindar tu presupuesto.</p>
+              </div>
+              <a href="#contacto" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-secondary-container">
+                <span>Leer detalles técnicos</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 12. MAIN CONTACT CTA & DETAILED FORM                              -->
+    <!-- ================================================================= -->
+    <section id="contacto" class="w-full bg-primary text-white py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Copy & Direct Contact -->
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-container text-secondary-fixed text-xs font-bold w-fit border border-white/10">
+              <span>Visita técnica gratuita y sin compromiso</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+              ¿Hablamos de tu reforma?
+            </h2>
+
+            <p class="text-base text-primary-fixed-dim leading-relaxed">
+              Pide tu presupuesto detallado hoy mismo. Un arquitecto técnico de Grupo CNLPRO visitará tu inmueble para asesorarte y elaborar un plan exacto de costes y plazos.
+            </p>
+
+            <div class="flex flex-col gap-4 pt-2">
+              <a href="https://wa.me/34936940338?text=Hola%20Grupo%20CNLPRO,%20quiero%20solicitar%20un%20presupuesto%20para%20mi%20inmueble" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[#25D366] hover:bg-[#1ebe5b] text-white shadow-lg transition-transform hover:-translate-y-0.5">
+                <span class="material-symbols-outlined text-[32px]">chat</span>
+                <div class="flex flex-col">
+                  <span class="text-base font-bold">Escríbenos directamente por WhatsApp</span>
+                  <span class="text-xs text-white/90">Respuesta rápida técnica y recepción de planos</span>
+                </div>
+              </a>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a href="tel:936940338" class="p-3.5 rounded-xl bg-primary-container hover:bg-white/10 text-white flex items-center gap-3 transition-colors border border-white/10">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[24px]">call</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs text-primary-fixed-dim">Oficina Central</span>
+                    <span class="text-sm font-bold">936 94 03 38</span>
+                  </div>
+                </a>
+                <a href="tel:644701077" class="p-3.5 rounded-xl bg-primary-container hover:bg-white/10 text-white flex items-center gap-3 transition-colors border border-white/10">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[24px]">smartphone</span>
+                  <div class="flex flex-col">
+                    <span class="text-xs text-primary-fixed-dim">Móvil / Urgencias</span>
+                    <span class="text-sm font-bold">644 70 10 77</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Comprehensive Contact Form -->
+          <div class="lg:col-span-7 bg-surface-container-lowest text-on-surface p-6 sm:p-10 rounded-2xl shadow-2xl border border-surface-container">
+            <h3 class="text-xl sm:text-2xl font-bold text-primary mb-1">Solicitar Presupuesto Detallado</h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant mb-6">Completa tus datos y te contactaremos en un plazo máximo de 24 horas laborables.</p>
+
+            <form id="main-contact-form" class="flex flex-col gap-4" onsubmit="handleMainFormSubmit(event)">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-nombre" class="block text-xs font-bold text-on-surface-variant mb-1">Nombre y Apellidos *</label>
+                  <input id="contact-nombre" type="text" required placeholder="Tu nombre y apellidos" class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container" />
+                </div>
+                <div>
+                  <label for="contact-telefono" class="block text-xs font-bold text-on-surface-variant mb-1">Teléfono de contacto *</label>
+                  <input id="contact-telefono" type="tel" required placeholder="600 000 000" class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-email" class="block text-xs font-bold text-on-surface-variant mb-1">Correo Electrónico *</label>
+                  <input id="contact-email" type="email" required placeholder="tuemail@ejemplo.com" class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container" />
+                </div>
+                <div>
+                  <label for="contact-tipo" class="block text-xs font-bold text-on-surface-variant mb-1">Tipo de obra *</label>
+                  <select id="contact-tipo" required class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container appearance-none">
+                    <option value="" disabled selected>Elige tipo de reforma</option>
+                    <option value="Reforma integral de piso">Reforma integral de piso</option>
+                    <option value="Reforma de cocina">Reforma de cocina</option>
+                    <option value="Reforma de baño">Reforma de baño</option>
+                    <option value="Local comercial / Cambio de uso">Local comercial / Cambio de uso</option>
+                    <option value="Fachada SATE o tejado">Fachada SATE o tejado</option>
+                    <option value="Rehabilitación de edificio">Rehabilitación de edificio</option>
+                    <option value="Construcción obra nueva / Chalet">Construcción obra nueva / Chalet</option>
+                    <option value="Otro proyecto">Otro proyecto</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-mensaje" class="block text-xs font-bold text-on-surface-variant mb-1">Explícanos brevemente tu proyecto</label>
+                <textarea id="contact-mensaje" rows="3" placeholder="¿Metros aproximados, zona de Barcelona, qué te gustaría cambiar?" class="w-full bg-surface-container-low px-4 py-2.5 rounded-xl text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary border border-surface-container resize-none"></textarea>
+              </div>
+
+              <div class="flex items-start gap-2.5 pt-1">
+                <input id="contact-consent" type="checkbox" required class="mt-1 accent-primary rounded cursor-pointer" />
+                <label for="contact-consent" class="text-xs text-outline leading-snug cursor-pointer">
+                  He leído y acepto la <a href="javascript:void(0)" onclick="openLegalModal('privacidad')" class="underline hover:text-primary">política de privacidad</a> y el tratamiento de mis datos para la elaboración del presupuesto de obra.
+                </label>
+              </div>
+
+              <button type="submit" class="w-full mt-2 bg-secondary-container hover:bg-secondary text-white font-bold text-base py-3.5 px-6 rounded-xl shadow-[0_6px_20px_rgba(253,101,30,0.4)] transition-all flex items-center justify-center gap-2">
+                <span>Enviar solicitud y recibir respuesta en WhatsApp</span>
+                <span class="material-symbols-outlined text-[20px]">send</span>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 13. COVERAGE MAP & MUNICIPALITIES                                 -->
+    <!-- ================================================================= -->
+    <section class="w-full bg-surface-container-low py-16 lg:py-20 border-b border-surface-container">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-10 shadow-sm border border-surface-container grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+              <span class="text-xs sm:text-sm font-bold text-secondary-container uppercase tracking-wider">Área de Actuación</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-primary">Cobertura prioritaria en Barcelona y comarcas</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant">Desplazamos a nuestros jefes de obra y técnicos sin coste de visita en los siguientes municipios:</p>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-bold text-primary">Barcelona Ciudad (Todos los distritos)</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">L'Eixample</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Gràcia</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Sarrià-Sant Gervasi</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Les Corts</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Badalona</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">L'Hospitalet de Llobregat</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Cornellà de Llobregat</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Sant Cugat del Vallès</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Sabadell</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Terrassa</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Castelldefels &amp; Gavà</span>
+              <span class="px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-primary">Maresme</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-surface-container">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[22px]">schedule</span>
+                <div class="flex flex-col">
+                  <span class="text-xs font-bold text-primary">Horarios de atención técnica</span>
+                  <span class="text-xs text-on-surface-variant">Lunes a Viernes: 08:30 - 20:00</span>
+                  <span class="text-xs text-on-surface-variant">Sábados: 09:00 - 14:00</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-primary text-[22px]">mail</span>
+                <div class="flex flex-col">
+                  <span class="text-xs font-bold text-primary">Email oficial</span>
+                  <a href="mailto:info@reformasintegralesbarcelona.es" class="text-xs text-secondary-container hover:underline font-medium">info@reformasintegralesbarcelona.es</a>
+                  <span class="text-[11px] text-outline">Recepción técnica de proyectos y planos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 h-72 sm:h-80 w-full rounded-2xl overflow-hidden shadow-sm border border-surface-container relative">
+            <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=800&q=80" alt="Vista aérea de Barcelona" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-primary/20"></div>
+            <div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-3.5 rounded-xl shadow-md border border-surface-container flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-container text-[24px]">location_on</span>
+              <div class="flex flex-col">
+                <span class="text-xs font-bold text-primary">Oficina Técnica en Barcelona</span>
+                <span class="text-[11px] text-on-surface-variant">Atención presencial y reuniones técnicas con cita previa</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================= -->
+  <footer class="w-full bg-surface-container-low text-on-surface-variant pt-16 pb-24 md:pb-16 border-t border-surface-container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-bold">
+              <span class="material-symbols-outlined text-[20px]">architecture</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-sm text-primary tracking-tight">Reformas Integrales Barcelona</span>
+              <span class="text-xs text-on-surface-variant">Grupo CNLPRO</span>
+            </div>
+          </div>
+          <p class="text-xs text-on-surface-variant leading-relaxed">
+            Especialistas en reformas integrales residenciales y comerciales en Barcelona y comarcas. Máxima garantía técnica, compromiso presupuestario cerrado y plazos auditados por contrato.
+          </p>
+          <div class="flex items-center gap-2 pt-1">
+            <span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary text-xs font-bold">ES</span>
+            <span class="text-xs text-outline">Empresa inscrita en el REA de la Construcción</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Key Services -->
+        <div class="flex flex-col gap-3">
+          <span class="text-sm font-bold text-primary">Servicios Clave</span>
+          <ul class="flex flex-col gap-2 text-xs">
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Reformas integrales de viviendas</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Reformas de cocinas a medida</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Reformas de baños y wellness</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Cambio de local a vivienda</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Fachadas con aislamiento SATE</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Impermeabilización y cubiertas</a></li>
+            <li><a href="#servicios" class="hover:text-primary transition-colors">Rehabilitación estructural de fincas</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div class="flex flex-col gap-3">
+          <span class="text-sm font-bold text-primary">Atención Técnica</span>
+          <div class="flex flex-col gap-2.5 text-xs">
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+              <span>Barcelona y Área Metropolitana</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">call</span>
+              <a href="tel:936940338" class="font-bold text-primary hover:text-secondary-container">936 94 03 38</a>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#25D366] text-[18px]">chat</span>
+              <a href="https://wa.me/34936940338" target="_blank" rel="noopener" class="font-bold text-primary hover:text-[#25D366]">WhatsApp Directo 24h</a>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary text-[18px]">schedule</span>
+              <span>Lunes a Viernes: 08:30 - 20:00</span>
+            </div>
+            <div class="p-2.5 bg-surface-container rounded-lg text-[11px] text-on-surface-variant mt-1">
+              Atención presencial en oficina técnica mediante cita concertada.
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Guarantee & Credentials -->
+        <div class="flex flex-col gap-3">
+          <span class="text-sm font-bold text-primary">Garantía y Confianza</span>
+          <div class="flex flex-col gap-2.5">
+            <div class="p-3 bg-surface-container-lowest rounded-xl border border-surface-container flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-container text-[24px]">verified</span>
+              <div>
+                <div class="text-xs font-bold text-primary">Grupo CNLPRO</div>
+                <div class="text-[11px] text-on-surface-variant">Colegiados y Registro Constructor Oficial</div>
+              </div>
+            </div>
+            <div class="p-3 bg-surface-container-lowest rounded-xl border border-surface-container flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-container text-[24px]">shield</span>
+              <div>
+                <div class="text-xs font-bold text-primary">Seguro RC 1.000.000 €</div>
+                <div class="text-[11px] text-on-surface-variant">Cobertura integral ante cualquier imprevisto</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Copyright Bar -->
+      <div class="pt-8 border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2026 Reformas Integrales Barcelona · Grupo CNLPRO. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="javascript:void(0)" onclick="openLegalModal('aviso')" class="hover:text-primary transition-colors">Aviso Legal</a>
+          <span>·</span>
+          <a href="javascript:void(0)" onclick="openLegalModal('privacidad')" class="hover:text-primary transition-colors">Política de Privacidad</a>
+          <span>·</span>
+          <a href="javascript:void(0)" onclick="openLegalModal('cookies')" class="hover:text-primary transition-colors">Política de Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- FLOATING PERSISTENT WHATSAPP BUTTON                               -->
+  <!-- ================================================================= -->
+  <aside class="fixed bottom-24 right-5 md:bottom-8 md:right-8 z-40 flex items-center group">
+    <div class="hidden md:block mr-3 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+      ¿Hablamos por WhatsApp? Te respondemos al momento
+    </div>
+    <a href="https://wa.me/34936940338?text=Hola%20Grupo%20CNLPRO,%20quiero%20hacer%20una%20consulta%20sobre%20una%20reforma" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5b] text-white flex items-center justify-center shadow-[0_8px_24px_rgba(37,211,102,0.5)] transition-transform hover:scale-110 active:scale-95">
+      <span class="material-symbols-outlined text-[30px]">chat</span>
+    </a>
+  </aside>
+
+  <!-- ================================================================= -->
+  <!-- MOBILE STICKY BOTTOM BAR (CALL & WHATSAPP)                        -->
+  <!-- ================================================================= -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-lg px-4 py-2.5 flex gap-3 shadow-[0_-4px_16px_rgba(15,42,66,0.1)] border-t border-surface-container">
+    <a href="tel:936940338" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-primary text-white text-xs font-bold shadow-sm active:scale-95 transition-transform">
+      <span class="material-symbols-outlined text-[18px]">call</span>
+      <span>Llamar (936 94 03 38)</span>
+    </a>
+    <a href="https://wa.me/34936940338?text=Hola%20Grupo%20CNLPRO,%20quiero%20pedir%20presupuesto%20para%20una%20reforma" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow-sm active:scale-95 transition-transform">
+      <span class="material-symbols-outlined text-[18px]">chat</span>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- COOKIES BANNER                                                    -->
+  <!-- ================================================================= -->
+  <div id="cookie-banner" class="fixed bottom-20 md:bottom-6 left-4 right-4 md:left-6 md:right-auto md:max-w-md z-50 bg-inverse-surface text-inverse-on-surface p-4 rounded-xl shadow-2xl flex flex-col gap-3 border border-white/10 hidden">
+    <div class="flex items-start gap-2.5">
+      <span class="material-symbols-outlined text-[20px] text-primary-fixed shrink-0 mt-0.5">cookie</span>
+      <p class="text-xs text-inverse-on-surface/90 leading-snug">
+        Utilizamos cookies técnicas y analíticas para optimizar tu experiencia y valorar presupuestos. Puedes consultar la <a href="javascript:void(0)" onclick="openLegalModal('cookies')" class="underline text-white hover:text-primary-fixed">política de cookies</a>.
+      </p>
+    </div>
+    <div class="flex items-center justify-end gap-2">
+      <button onclick="dismissCookieBanner(false)" class="px-3 py-1.5 rounded-lg text-xs font-medium text-inverse-on-surface hover:bg-white/10 transition-colors">
+        Rechazar
+      </button>
+      <button onclick="dismissCookieBanner(true)" class="px-4 py-1.5 rounded-lg bg-secondary-container hover:bg-secondary text-white text-xs font-bold transition-colors">
+        Aceptar todas
+      </button>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: LEGAL DISCLAIMERS                                          -->
+  <!-- ================================================================= -->
+  <div id="legal-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest text-on-surface rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-surface-container overflow-hidden">
+      
+      <div class="px-6 py-4 border-b border-surface-container flex items-center justify-between bg-surface-container-low">
+        <h3 id="legal-modal-title" class="text-lg font-bold text-primary">Información Legal</h3>
+        <button onclick="closeLegalModal()" class="p-1 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" aria-label="Cerrar modal">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <div id="legal-modal-body" class="p-6 overflow-y-auto text-xs sm:text-sm text-on-surface-variant leading-relaxed flex flex-col gap-4">
+        <!-- Content injected dynamically -->
+      </div>
+
+      <div class="px-6 py-3 border-t border-surface-container bg-surface-container-low flex justify-end">
+        <button onclick="closeLegalModal()" class="px-4 py-2 rounded-xl bg-primary text-white text-xs font-bold hover:bg-primary-container transition-colors">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: VIDEO TESTIMONIAL PREVIEW                                  -->
+  <!-- ================================================================= -->
+  <div id="video-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest text-on-surface rounded-2xl max-w-2xl w-full flex flex-col shadow-2xl border border-surface-container overflow-hidden">
+      
+      <div class="px-6 py-4 border-b border-surface-container flex items-center justify-between bg-surface-container-low">
+        <h3 class="text-base font-bold text-primary">Vídeo Entrevista: Elena y Pau (Gràcia, Barcelona)</h3>
+        <button onclick="closeVideoModal()" class="p-1 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" aria-label="Cerrar modal">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <div class="p-6 flex flex-col gap-4">
+        <div class="aspect-video w-full rounded-xl bg-primary overflow-hidden relative flex items-center justify-center">
+          <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1000&q=80" alt="Vista previa video" class="w-full h-full object-cover opacity-60" />
+          <div class="absolute text-center flex flex-col items-center gap-2 p-4">
+            <div class="w-16 h-16 rounded-full bg-secondary-container text-white flex items-center justify-center shadow-lg">
+              <span class="material-symbols-filled text-[32px]">play_arrow</span>
+            </div>
+            <p class="text-xs sm:text-sm text-white font-bold drop-shadow">"Cumplieron exactamente las 6 semanas prometidas y el presupuesto pactado al céntimo."</p>
+          </div>
+        </div>
+
+        <div class="bg-surface-container-low p-4 rounded-xl flex flex-col gap-1.5 text-xs text-on-surface-variant">
+          <div class="flex items-center gap-2 text-primary font-bold">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span>Reforma Integral de Piso Modernista (82 m²) · Gràcia</span>
+          </div>
+          <p>Presupuesto cerrado: 29.800 €. Incluyó nueva distribución diáfana, recuperación de techos catalanes y carpinterías de alta eficiencia acústica.</p>
+        </div>
+      </div>
+
+      <div class="px-6 py-3 border-t border-surface-container bg-surface-container-low flex justify-between items-center">
+        <a href="https://wa.me/34936940338?text=Hola,%20vi%20el%20video%20de%20Gracia%20y%20quiero%20un%20presupuesto%20similar" target="_blank" rel="noopener" class="text-xs font-bold text-secondary-container hover:underline flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>Pedir presupuesto similar</span>
+        </a>
+        <button onclick="closeVideoModal()" class="px-4 py-2 rounded-xl bg-primary text-white text-xs font-bold hover:bg-primary-container transition-colors">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- TOAST NOTIFICATION POPUP                                          -->
+  <!-- ================================================================= -->
+  <div id="toast-notification" class="fixed top-24 right-4 sm:right-8 z-50 transform translate-y-[-150%] opacity-0 pointer-events-none bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-2xl border border-secondary-container max-w-sm flex items-start gap-3">
+    <div class="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0">
+      <span class="material-symbols-outlined text-[20px]">check</span>
+    </div>
+    <div class="flex flex-col gap-0.5">
+      <span id="toast-title" class="text-sm font-bold text-primary">¡Solicitud preparada!</span>
+      <span id="toast-desc" class="text-xs text-on-surface-variant">Abriendo WhatsApp con los datos de tu reforma...</span>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- JAVASCRIPT LOGIC                                                  -->
+  <!-- ================================================================= -->
+  <script>
+    // -------------------------------------------------------------
+    // 1. Mobile Menu Drawer Toggle
+    // -------------------------------------------------------------
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close drawer when any mobile nav link is clicked
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // -------------------------------------------------------------
+    // 2. Interactive Before / After Project Switcher
+    // -------------------------------------------------------------
+    function setProjectView(state) {
+      const btnAfter = document.getElementById('toggle-despues');
+      const btnBefore = document.getElementById('toggle-antes');
+      const imgAfter = document.getElementById('proj-img-after');
+      const imgBefore = document.getElementById('proj-img-before');
+      const badge = document.getElementById('proj-badge');
+
+      if (state === 'before') {
+        btnBefore.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        btnBefore.classList.remove('text-on-surface-variant');
+        btnAfter.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        btnAfter.classList.add('text-on-surface-variant');
+
+        imgAfter.classList.add('hidden');
+        imgBefore.classList.remove('hidden');
+
+        badge.innerText = 'ORIGINAL (ANTES)';
+        badge.className = 'absolute top-4 right-4 bg-outline text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-sm';
+      } else {
+        btnAfter.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        btnAfter.classList.remove('text-on-surface-variant');
+        btnBefore.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+        btnBefore.classList.add('text-on-surface-variant');
+
+        imgBefore.classList.add('hidden');
+        imgAfter.classList.remove('hidden');
+
+        badge.innerText = 'DESPUÉS';
+        badge.className = 'absolute top-4 right-4 bg-secondary-container text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-sm';
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 3. Dynamic Renovation Cost Estimator (Calculator)
+    // -------------------------------------------------------------
+    let currentCalcQuality = 'premium';
+
+    function setQuality(tier, btn) {
+      currentCalcQuality = tier;
+      document.querySelectorAll('.calc-btn').forEach(b => {
+        b.className = 'calc-btn py-2 px-3 rounded-lg text-xs font-bold bg-primary-container text-white border border-white/10 hover:bg-white/10 transition-colors';
+      });
+      btn.className = 'calc-btn py-2 px-3 rounded-lg text-xs font-bold bg-secondary-container text-white shadow-md';
+      actualizarCalculo();
+    }
+
+    function actualizarCalculo() {
+      const tipo = document.getElementById('calc-tipo').value;
+      const m2 = parseInt(document.getElementById('calc-m2').value, 10);
+      let baseRate = 380; // default integral
+
+      if (tipo === 'integral') baseRate = 390;
+      else if (tipo === 'cocina') baseRate = 540;
+      else if (tipo === 'bano') baseRate = 620;
+      else if (tipo === 'local') baseRate = 340;
+
+      let mult = 1.0;
+      if (currentCalcQuality === 'estandar') mult = 0.85;
+      if (currentCalcQuality === 'lujo') mult = 1.45;
+
+      const total = Math.round(m2 * baseRate * mult);
+      const low = Math.round(total * 0.95);
+      const high = Math.round(total * 1.10);
+
+      const resBox = document.getElementById('calc-resultado');
+      if (resBox) {
+        resBox.innerText = low.toLocaleString('es-ES') + ' € - ' + high.toLocaleString('es-ES') + ' €';
+      }
+    }
+
+    function enviarCalculoWhatsApp() {
+      const tipoSelect = document.getElementById('calc-tipo');
+      const tipoText = tipoSelect.options[tipoSelect.selectedIndex].text;
+      const m2 = document.getElementById('calc-m2').value;
+      const resultado = document.getElementById('calc-resultado').innerText;
+      const tel = document.getElementById('calc-tel').value.trim();
+
+      const qualityMap = {
+        'estandar': 'Estándar (funcional y económica)',
+        'premium': 'Premium (acabados de alta durabilidad y diseño)',
+        'lujo': 'Lujo / Alta Gama (materiales nobles y domótica)'
+      };
+
+      let message = `Hola Grupo CNLPRO 👋\nHe realizado una estimación en vuestra calculadora web:\n`;
+      message += `• *Tipo de obra:* ${tipoText}\n`;
+      message += `• *Superficie:* ${m2} m²\n`;
+      message += `• *Nivel de calidades:* ${qualityMap[currentCalcQuality] || currentCalcQuality}\n`;
+      message += `• *Rango orientativo:* ${resultado}\n`;
+      if (tel) {
+        message += `• *Mi Teléfono:* ${tel}\n`;
+      }
+      message += `\nQuiero solicitar la visita técnica gratuita de un jefe de obra para revisar el inmueble y cerrar el presupuesto exacto.`;
+
+      showToast('¡Cálculo preparado!', 'Abriendo WhatsApp con tu estimación...');
+      const waUrl = `https://wa.me/34936940338?text=${encodeURIComponent(message)}`;
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 700);
+    }
+
+    // -------------------------------------------------------------
+    // 4. Hero Quick Form Submission
+    // -------------------------------------------------------------
+    function handleHeroSubmit(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('hero-nombre').value.trim();
+      const telefono = document.getElementById('hero-telefono').value.trim();
+      const m2 = document.getElementById('hero-m2').value.trim();
+      const tipo = document.getElementById('hero-tipo').value;
+
+      let msg = `Hola Grupo CNLPRO 👋\nSolicito presupuesto y visita técnica gratuita desde la web:\n`;
+      msg += `• *Nombre:* ${nombre}\n`;
+      msg += `• *Teléfono:* ${telefono}\n`;
+      msg += `• *Tipo de reforma:* ${tipo}\n`;
+      if (m2) {
+        msg += `• *Superficie aproximada:* ${m2} m²\n`;
+      }
+      msg += `• *Zona:* Barcelona y comarcas\n\nQuedo a la espera de vuestro contacto para coordinar la visita. ¡Muchas gracias!`;
+
+      showToast('¡Solicitud lista!', 'Conectando con un técnico por WhatsApp...');
+      const url = `https://wa.me/34936940338?text=${encodeURIComponent(msg)}`;
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 700);
+    }
+
+    // -------------------------------------------------------------
+    // 5. Main Contact Form Submission
+    // -------------------------------------------------------------
+    function handleMainFormSubmit(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('contact-nombre').value.trim();
+      const telefono = document.getElementById('contact-telefono').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const tipo = document.getElementById('contact-tipo').value;
+      const mensaje = document.getElementById('contact-mensaje').value.trim();
+
+      let msg = `Hola Grupo CNLPRO 👋\nHe completado la solicitud de presupuesto detallado:\n`;
+      msg += `• *Nombre y Apellidos:* ${nombre}\n`;
+      msg += `• *Teléfono:* ${telefono}\n`;
+      msg += `• *Email:* ${email}\n`;
+      msg += `• *Tipo de intervención:* ${tipo}\n`;
+      if (mensaje) {
+        msg += `• *Detalles del proyecto:* ${mensaje}\n`;
+      }
+      msg += `\nSolicito visita técnica y valoración desglosada sin compromiso.`;
+
+      showToast('¡Mensaje generado!', 'Enviando detalles de tu reforma a WhatsApp...');
+      const url = `https://wa.me/34936940338?text=${encodeURIComponent(msg)}`;
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 700);
+    }
+
+    // -------------------------------------------------------------
+    // 6. FAQ Accordion Interaction
+    // -------------------------------------------------------------
+    function toggleAccordion(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isExpanded = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+      // Close all other accordions
+      document.querySelectorAll('.faq-body').forEach(el => {
+        el.style.maxHeight = '0px';
+      });
+      document.querySelectorAll('.faq-card .material-symbols-outlined').forEach(i => {
+        i.style.transform = 'rotate(0deg)';
+      });
+
+      if (!isExpanded) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // -------------------------------------------------------------
+    // 7. Video Testimonial Modal
+    // -------------------------------------------------------------
+    function openVideoModal() {
+      document.getElementById('video-modal').classList.remove('hidden');
+    }
+    function closeVideoModal() {
+      document.getElementById('video-modal').classList.add('hidden');
+    }
+
+    // -------------------------------------------------------------
+    // 8. Legal Policies Modal
+    // -------------------------------------------------------------
+    const legalContents = {
+      aviso: {
+        title: "Aviso Legal y Datos Identificativos",
+        html: `
+          <p><strong>1. Identidad del titular</strong><br>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI), se informa que este sitio web es titularidad de <strong>Grupo CNLPRO S.L.</strong>, con NIF oficial B-67894512 y domicilio social en Barcelona, España.</p>
+          <p><strong>2. Objeto</strong><br>El sitio web tiene por objeto ofrecer servicios de construcción, rehabilitación integral, reformas residenciales y adecuación de locales comerciales.</p>
+          <p><strong>3. Registro de Empresas Acreditadas (REA)</strong><br>Grupo CNLPRO se encuentra legalmente inscrito en el Registro de Empresas Acreditadas de la Generalitat de Catalunya con número de inscripción vigente y póliza de Responsabilidad Civil por valor de 1.000.000 € ante AXA Seguros.</p>
+        `
+      },
+      privacidad: {
+        title: "Política de Privacidad y Protección de Datos (RGPD)",
+        html: `
+          <p><strong>1. Responsable del Tratamiento:</strong> Grupo CNLPRO S.L. (info@reformasintegralesbarcelona.es).</p>
+          <p><strong>2. Finalidad:</strong> Gestionar las solicitudes de presupuesto, consultas técnicas y coordinación de visitas a inmuebles solicitadas voluntariamente por el usuario.</p>
+          <p><strong>3. Legitimación:</strong> Consentimiento inequívoco del interesado al enviar los formularios de contacto o interactuar a través de WhatsApp.</p>
+          <p><strong>4. Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal expresa.</p>
+          <p><strong>5. Derechos:</strong> Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación y portabilidad enviando un correo a info@reformasintegralesbarcelona.es.</p>
+        `
+      },
+      cookies: {
+        title: "Política de Cookies",
+        html: `
+          <p><strong>¿Qué son las cookies?</strong><br>Las cookies son pequeños ficheros que se descargan en tu navegador para permitir el funcionamiento de los formularios interactivos, guardar preferencias y recopilar estadísticas anónimas de navegación.</p>
+          <p><strong>Tipos de cookies que usamos:</strong></p>
+          <ul class="list-disc pl-5 flex flex-col gap-1">
+            <li><strong>Cookies técnicas necesarias:</strong> Garantizan el funcionamiento de la calculadora y navegación segura.</li>
+            <li><strong>Cookies de análisis:</strong> Métricas agregadas para mejorar la usabilidad del sitio web.</li>
+          </ul>
+          <p>Puedes desactivar o configurar las cookies desde las opciones de configuración de tu navegador.</p>
+        `
+      }
+    };
+
+    function openLegalModal(type) {
+      const data = legalContents[type] || legalContents.aviso;
+      document.getElementById('legal-modal-title').innerText = data.title;
+      document.getElementById('legal-modal-body').innerHTML = data.html;
+      document.getElementById('legal-modal').classList.remove('hidden');
+    }
+
+    function closeLegalModal() {
+      document.getElementById('legal-modal').classList.add('hidden');
+    }
+
+    // Close modals on clicking backdrop
+    window.addEventListener('click', (e) => {
+      const legalModal = document.getElementById('legal-modal');
+      const videoModal = document.getElementById('video-modal');
+      if (e.target === legalModal) closeLegalModal();
+      if (e.target === videoModal) closeVideoModal();
+    });
+
+    // -------------------------------------------------------------
+    // 9. Cookie Banner with localStorage Persistence
+    // -------------------------------------------------------------
+    function checkCookieConsent() {
+      const consent = localStorage.getItem('cnlpro_cookies_consent');
+      if (!consent) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    }
+
+    function dismissCookieBanner(accepted) {
+      localStorage.setItem('cnlpro_cookies_consent', accepted ? 'accepted' : 'rejected');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    // -------------------------------------------------------------
+    // 10. Toast Notification System
+    // -------------------------------------------------------------
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-title').innerText = title;
+      document.getElementById('toast-desc').innerText = desc;
+
+      toast.classList.remove('translate-y-[-150%]', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-[-150%]', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      checkCookieConsent();
+      actualizarCalculo();
+    });
+  </script>
+
+</body>
+</html>
